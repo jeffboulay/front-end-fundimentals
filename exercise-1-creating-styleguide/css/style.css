@@ -1,0 +1,52 @@
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+*{
+	box-sizing:border-box;
+}
+.wrapper.base{
+	max-width: 700px;
+	background-color: #666;
+	margin:0 auto;
+	padding: 10px;
+	//overflow: hidden;
+}
+.row{
+	width: 100%;
+	background-color: #ccc;
+	overflow: hidden;
+}
+.col{
+	float: left;
+	height: 50px;
+	text-align: center;
+	background-color: #eee;
+}
+
+.one-col .col{
+	width: 100%;
+}
+
+.one-col .col:nth-child(1){
+	margin-right: 0;
+}
+
+.two-col .col{
+	width: 50%;
+}
+
+.two-col .col:nth-child(2){
+	margin-right: 0;
+}
+
+.three-col .col{
+	width: 33.3%;
+}
+
+.three-col .col:nth-child(3){
+	margin-right: 0;
+}
+
+.four-col .col{
+	width: 25%;
+}
