@@ -11,6 +11,7 @@ body{
 	padding: 10px;
 	//overflow: hidden;
 }
+/*grid layout start*/
 .row{
 	width: 100%;
 	background-color: #ccc;
@@ -49,4 +50,15 @@ body{
 
 .four-col .col{
 	width: 25%;
+}
+/*grid layout end */
+
+nav ul{
+	list-style: none;
+}
+nav a{
+	text-decoration: none;
+}
+nav.horizontal li{
+	display: inline-block;
 }
