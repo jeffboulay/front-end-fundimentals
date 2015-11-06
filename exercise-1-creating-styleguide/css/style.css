@@ -1,5 +1,7 @@
 body{
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
 }
 *{
 	box-sizing:border-box;
@@ -55,10 +57,52 @@ body{
 
 nav ul{
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 nav a{
 	text-decoration: none;
 }
+nav.right ul{
+	float: right;
+}
+
+nav.horizontal {
+	width: 100%;
+	background-color: #ccc;
+}
+
+nav.horizontal:after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 1px;
+}
+
 nav.horizontal li{
-	display: inline-block;
+	float: left;
+	padding:5px 10px;
+}
+
+nav.vertical{
+	clear: left;
+}
+nav.vertical ul{
+	width: 30%;
+}
+
+nav.vertical li{
+	border-bottom:white solid 1px; 
+}
+
+nav.vertical a {
+	padding:5px 10px;
+	display: block;
+	background-color: #666;
+	color: white;
+}
+
+nav.vertical a:hover {
+	background-color: blue;
+	color:red;
 }

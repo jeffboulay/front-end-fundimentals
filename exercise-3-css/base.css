@@ -1,0 +1,70 @@
+/*element selector*/
+h1{
+    color:blue;
+}
+
+/*class selector*/
+.block{
+    background-color: #eeeeee;
+
+}
+
+span {
+    background-color: white;
+}
+
+/*direct child selector*/
+div > span {
+    background-color: DodgerBlue;
+}
+
+/*nth child selectors*/
+.child-selector li:nth-child(odd){
+    background-color: lightgrey;
+}
+
+/*pseudo element*/
+.p-element:after{
+    content: 'This content was added by CSS';
+}
+
+/*
+    styled button
+    http://www.colorzilla.com/gradient-editor/
+    */
+button.fancy{
+    background: #7db9e8;
+    background: -moz-linear-gradient(top, #7db9e8 0%, #1e5799 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#1e5799));
+    background: -webkit-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+    background: -o-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+    background: -ms-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+    background: linear-gradient(to bottom, #7db9e8 0%,#1e5799 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );
+
+
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.55);
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.55);
+
+    display: block;
+    border: solid 1px white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color:white;
+    margin: 20px;
+    transition: all 0.5s ease;
+}
+
+button.fancy:hover{
+    border:solid 1px blue;
+}
+
+/*media queries*/
+@media screen and (min-width:700px) {
+    .responsive-col div{
+        width:50%;
+        float: left;
+    }
+}
