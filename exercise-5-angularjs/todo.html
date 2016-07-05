@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app = "todoApp" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+</head>
+<body ng-controller = "todoCtrl">
+    <form ng-submit = "addTodo(item);">
+        <p>
+            <label for="todo">Add a Todo</label>
+            <input type="text" id="todo" min="0" ng-model="item">
+        </p>
+        <input type="submit" value="Submit">
+    </form>
+
+    <ul>
+        <li ng-repeat="todo in todos">
+            <input type="checkbox" name="complete" ng-model = "todo.complete">
+            {{todo.description}}</li>
+    </ul>
+    <script>
+    angular.module('todoApp', [])
+        .controller('todoCtrl', ['$scope', function ($scope) {
+            $scope.todos = [];
+
+            $scope.addTodo = function (item) {
+                var newTodo = {
+                    complete: false ,
+                    description: item
+                };
+
+                $scope.todos.push(newTodo);
+                $scope.item = '';
+            }
+        }]);
+    </script>
+</body>
+
+</html>
